@@ -1,10 +1,14 @@
 import React from "react";
 import { View, Text, ScrollView, StyleSheet } from "react-native";
+import { useLocalSearchParams } from "expo-router";
+
 
 const IntroductionScreen = () => {
+  const { BusNo } = useLocalSearchParams();
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.heading}>Harjot Singh – Web Developer & Interactive Designer</Text>
+      <Text style={styles.heading}>Bus Number {BusNo}</Text>
       <Text style={styles.text}>
         Hi, I’m Harjot Singh, a passionate web developer and 
          interactive designer currently pursuing an 

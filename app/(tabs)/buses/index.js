@@ -6,7 +6,7 @@ export default function Index() {
     <View style={styles.container}>
       <Text style={styles.heading}>Buses Nearby</Text>
       <Link  
-      href={{pathname: "/buses/details"}}
+      href={{pathname: "/buses/details", params: {BusNo: 61}}}
       asChild  
       >
       <Pressable style={styles.buses}>
@@ -18,7 +18,11 @@ export default function Index() {
           <Text style={styles.secondaryText}>minutes</Text>{" "}
         </View>
       </Pressable></Link>
-      <View style={styles.buses}>
+
+      <Link asChild
+      href={{pathname: "/buses/details", params: {BusNo: 65}}}
+      >
+      <Pressable style={styles.buses}>
         <View>
           <Text style={styles.text}>65</Text> <Text style={styles.secondaryText}>City Center</Text>
         </View>
@@ -26,8 +30,13 @@ export default function Index() {
           <Text style={styles.text}>00</Text>
           <Text style={styles.secondaryText}>minutes</Text>{" "}
         </View>
-      </View>
-      <View style={styles.buses}>
+      </Pressable>
+      </Link>
+
+      <Link asChild 
+      href={{pathname: "/buses/details", params: {BusNo: 63}}}
+      >
+      <Pressable style={styles.buses}>
         <View>
           <Text style={styles.text}>63</Text> <Text style={styles.secondaryText}>Hampton Village</Text>
         </View>
@@ -35,8 +44,13 @@ export default function Index() {
           <Text style={styles.text}>9</Text>
           <Text style={styles.secondaryText}>minutes</Text>{" "}
         </View>
-      </View>
-      <View style={styles.buses}>
+      </Pressable>
+      </Link>
+
+      <Link asChild
+      href={{pathname: "/buses/details", params: {BusNo: 82}}}
+      >
+      <Pressable style={styles.buses}>
         <View>
           <Text style={styles.text}>82</Text> <Text style={styles.secondaryText}>Center mall</Text>
         </View>
@@ -44,7 +58,8 @@ export default function Index() {
           <Text style={styles.text}>03</Text>
           <Text style={styles.secondaryText}>minutes</Text>{" "}
         </View>
-      </View>
+      </Pressable>
+      </Link>
     </View>
   );
 }
