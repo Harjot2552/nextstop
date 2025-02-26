@@ -10,38 +10,38 @@ export default function Index() {
         }}>
       <View style={styles.buses}>
         <View>
-          <Text style={styles.text}>61</Text> <Text>Confedration Terminal</Text>
+          <Text style={styles.text}>61</Text> <Text style={styles.secondaryText}>Confedration Terminal</Text>
         </View>
         <View>
           <Text style={styles.text}>05</Text>
-          <Text>minutes</Text>{" "}
+          <Text style={styles.secondaryText}>minutes</Text>{" "}
         </View>
       </View></Link>
       <View style={styles.buses}>
         <View>
-          <Text style={styles.text}>65</Text> <Text>City Center</Text>
+          <Text style={styles.text}>65</Text> <Text style={styles.secondaryText}>City Center</Text>
         </View>
         <View>
           <Text style={styles.text}>00</Text>
-          <Text>minutes</Text>{" "}
+          <Text style={styles.secondaryText}>minutes</Text>{" "}
         </View>
       </View>
       <View style={styles.buses}>
         <View>
-          <Text style={styles.text}>63</Text> <Text>Hampton Village</Text>
+          <Text style={styles.text}>63</Text> <Text style={styles.secondaryText}>Hampton Village</Text>
         </View>
         <View>
           <Text style={styles.text}>9</Text>
-          <Text>minutes</Text>{" "}
+          <Text style={styles.secondaryText}>minutes</Text>{" "}
         </View>
       </View>
       <View style={styles.buses}>
         <View>
-          <Text style={styles.text}>82</Text> <Text>Center mall</Text>
+          <Text style={styles.text}>82</Text> <Text style={styles.secondaryText}>Center mall</Text>
         </View>
         <View>
           <Text style={styles.text}>03</Text>
-          <Text>minutes</Text>{" "}
+          <Text style={styles.secondaryText}>minutes</Text>{" "}
         </View>
       </View>
     </View>
@@ -62,6 +62,9 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     marginBottom: 20,
     marginTop: 30,
+  },
+  secondaryText:{
+    color: '#B7B7B7',
   },
   text: {
     fontSize: 24,
