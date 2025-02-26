@@ -17,9 +17,9 @@ export default function TabLayout() {
             }}
         >
             <Tabs.Screen
-                name="notes"
+                name="buses"
                 options={{
-                    title: 'Notes',
+                    title: 'Buses',
                     headerShown: false,
                     tabBarIcon: ({ color, focused }) => (
                         <Ionicons name={focused ? 'folder-open' : 'folder-open'} color={color} size={24} />
@@ -27,6 +27,16 @@ export default function TabLayout() {
                 }}
             />
             <Tabs.Screen
+                name="tickets"
+                options={{
+                    title: 'Tickets',
+                    headerShown: false,
+                    tabBarIcon: ({ color, focused }) => (
+                        <Ionicons name={focused ? 'man' : 'man'} color={color} size={24} />
+                    ),
+                }}
+            />
+             <Tabs.Screen
                 name="profile"
                 options={{
                     title: 'Profile',

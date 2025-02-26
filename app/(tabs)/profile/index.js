@@ -1,21 +1,10 @@
-import { Text, View, StyleSheet } from 'react-native';
-import { Link } from 'expo-router';
+import { Text, View, StyleSheet,TouchableOpacity, Alert  } from 'react-native';
+ import { Link } from 'expo-router'; 
 
-export default function AboutScreen() {
+export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Profile screen</Text>
-      <Link href={{
-        pathname:   "/profile/settings",
-        params: {pass: false },
-
-      }}
-      
-     style={styles.button}
-     
-      >
-        Go to Settings screen
-      </Link>
+       <Text style={styles.text}>Profile Index</Text>
     </View>
   );
 }
@@ -23,16 +12,30 @@ export default function AboutScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f8f9fa",
   },
   text: {
-    color: '#000',
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 20,
   },
   button: {
+    backgroundColor: "#007bff",
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+  },
+  button1:{
+    marginTop: 30,
     fontSize: 20,
     textDecorationLine: 'underline',
     color: '#000',
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "bold",
   },
 });

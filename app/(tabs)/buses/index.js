@@ -8,7 +8,7 @@ export default function Index() {
       <TouchableOpacity style={styles.button} onPress={() => Alert.alert("Button Pressed!")}>
         <Text style={styles.buttonText}>Click Me</Text>
       </TouchableOpacity>
-      <Link href="/notes/details" style={styles.button1}>
+      <Link href="/buses/details" style={styles.button1}>
         Go to Details screen
       </Link>
     </View>
