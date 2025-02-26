@@ -1,14 +1,15 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Pressable } from "react-native";
 import { Link } from "expo-router";
 
 export default function Index() {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Buses Nearby</Text>
-      <Link href={{
-          pathname: "/buses/details"
-        }}>
-      <View style={styles.buses}>
+      <Link  
+      href={{pathname: "/buses/details"}}
+      asChild  
+      >
+      <Pressable style={styles.buses}>
         <View>
           <Text style={styles.text}>61</Text> <Text style={styles.secondaryText}>Confedration Terminal</Text>
         </View>
@@ -16,7 +17,7 @@ export default function Index() {
           <Text style={styles.text}>05</Text>
           <Text style={styles.secondaryText}>minutes</Text>{" "}
         </View>
-      </View></Link>
+      </Pressable></Link>
       <View style={styles.buses}>
         <View>
           <Text style={styles.text}>65</Text> <Text style={styles.secondaryText}>City Center</Text>
