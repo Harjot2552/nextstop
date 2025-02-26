@@ -1,16 +1,13 @@
-import { Text, View, StyleSheet,TouchableOpacity, Alert  } from 'react-native';
- import { Link } from 'expo-router'; 
+import { Text, View, StyleSheet  } from 'react-native';
+
 
 export default function Index() {
   return (
     <View style={styles.container}>
-       <Text style={styles.text}>Welcome to My App</Text>
-      <TouchableOpacity style={styles.button} onPress={() => Alert.alert("Button Pressed!")}>
-        <Text style={styles.buttonText}>Click Me</Text>
-      </TouchableOpacity>
-      <Link href="/buses/details" style={styles.button1}>
-        Go to Details screen
-      </Link>
+      <View style={styles.buses}>
+        <View><Text style={styles.text}>61</Text> <Text >Confedration Terminal</Text></View>
+        <View><Text style={styles.text}>05</Text><Text >minutes</Text> </View>
+      </View>
     </View>
   );
 }
@@ -20,28 +17,21 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "blue",
   },
   text: {
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 20,
   },
-  button: {
-    backgroundColor: "#007bff",
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    borderRadius: 8,
-  },
-  button1:{
-    marginTop: 30,
-    fontSize: 20,
-    textDecorationLine: 'underline',
-    color: '#000',
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 18,
-    fontWeight: "bold",
-  },
+  buses:{
+    // flex: 2,
+    backgroundColor: '#fff',
+    width: '90%',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: 10,
+    borderRadius: 5,
+  }
 });
