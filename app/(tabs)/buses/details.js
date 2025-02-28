@@ -23,8 +23,8 @@ const IntroductionScreen = () => {
       <View style={styles.busNumber}>
         <View style={styles.details}>
           <View>
-            <Text>{BusNo}</Text>
-            <Text>in {BusTime} minutes</Text>
+            <Text style={styles.text}>{BusNo}</Text>
+            <Text style={styles.textSecondary}>in {BusTime} minutes</Text>
           </View>
           <View>
             <Ionicons name={"folder-open"} color="#000" size={24} />
@@ -32,8 +32,8 @@ const IntroductionScreen = () => {
         </View>
         <View style={styles.details}>
           <View>
-            <Text>Go</Text>
-            <Text>in 6 minutes</Text>
+            <Text style={styles.text}>Go</Text>
+            <Text style={styles.textSecondary}>in 6 minutes</Text>
           </View>
           <View>
             <Ionicons name={"folder-open"} color="#000" size={24} />
@@ -44,15 +44,23 @@ const IntroductionScreen = () => {
       <View style={styles.busStops}>
         <Text style={styles.heading}>Bus Stops</Text>
         <View style={styles.stops}>
-        <Text style={styles.stoptext}>Stop 1</Text>
-        <Text  style={styles.stoptext}>Stop 1</Text>
-        <Text style={styles.stoptext}>Stop 1</Text>
-        <Text style={styles.stoptext}>Stop 1</Text>
-        <Text style={styles.stoptext}>Stop 1</Text>
+        <Text style={styles.stoptext}>&#9758; Stop 1</Text>
+        <Text  style={styles.stoptext}>&#9758; Stop 1</Text>
+        <Text style={styles.stoptext}>&#9758; Stop 1</Text>
+        <Text style={styles.stoptext}>&#9758; Stop 1</Text>
+        <Text style={styles.stoptext}>&#9758; Stop 1</Text>
         </View>
       </View>
       <View style={styles.cta}>
-
+        <Text style={styles.ctaHeading}>Contact NextStop</Text>
+        <View style={styles.contact}>
+          <Text style={styles.headingCta}>Help</Text>
+          <Ionicons name={"folder-open"} color="#fff" size={24} />
+        </View>
+        <View style={styles.help}>
+        <Text style={styles.headingCta}>Email Us</Text>
+        <Ionicons name={"folder-open"} color="#fff" size={24} />
+        </View>
       </View>
     </ScrollView>
   );
@@ -79,10 +87,13 @@ const styles = StyleSheet.create({
     color: "#333",
   },
   text: {
-    fontSize: 16,
+    fontSize: 19,
     lineHeight: 24,
     color: "#555",
-    marginBottom: 10,
+    fontWeight: 700,
+  },
+  textSecondary:{
+    color: '#B7B7B7',
   },
   bold: {
     fontWeight: "bold",
@@ -111,6 +122,7 @@ const styles = StyleSheet.create({
     width: "40%",
     height: 70,
     padding: 12,
+    borderRadius: 5,
   },
   busStops:{
     marginTop: 15,
@@ -125,12 +137,51 @@ const styles = StyleSheet.create({
     marginTop: 14,
   },
   stoptext:{
-    fontSize: 17,
+    fontSize: 19,
     lineHeight: 24,
     color: "#fff",
-    marginBottom: 10,
-    textDecorationLine: 'underline',
+    marginBottom: 15,
   },
+  cta:{
+    backgroundColor: "white",
+    width: 'auto',
+    justifyContent: 'center',
+    margin: 21,
+    borderRadius: 7,
+  },
+  ctaHeading:{
+    margin: 15,
+    fontSize: 22,
+    fontWeight: 600,
+    color: 'black',
+    marginBottom: 5,
+
+  },
+  contact:{
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    padding: 13,
+    alignItems: 'center',
+    backgroundColor: '#0061FF',
+    margin:15,
+    marginBottom: 10,
+    borderRadius: 5,
+  },
+  headingCta:{
+    fontSize: 20,
+    fontWeight: 700,
+    color: '#fff'
+  },
+  help:{
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    padding: 13,
+    alignItems: 'center',
+    backgroundColor: '#0061FF',
+    margin:15,
+    marginTop: 4,
+    borderRadius: 5,
+  }
 });
 
 export default IntroductionScreen;

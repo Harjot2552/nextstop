@@ -26,7 +26,7 @@ export default function Index() {
       </Pressable></Link>
 
       <Link asChild
-      href={{pathname: "/buses/details", params: {BusNo: 65}}}
+      href={{pathname: "/buses/details", params: {BusNo: 65, BusTime: 0}}}
       >
       <Pressable style={styles.buses}>
         <View>
@@ -40,7 +40,7 @@ export default function Index() {
       </Link>
 
       <Link asChild 
-      href={{pathname: "/buses/details", params: {BusNo: 63}}}
+      href={{pathname: "/buses/details", params: {BusNo: 63, BusTime: 9}}}
       >
       <Pressable style={styles.buses}>
         <View>
@@ -54,7 +54,7 @@ export default function Index() {
       </Link>
 
       <Link asChild
-      href={{pathname: "/buses/details", params: {BusNo: 82}}}
+      href={{pathname: "/buses/details", params: {BusNo: 82, BusTime: 3}}}
       >
       <Pressable style={styles.buses}>
         <View>
