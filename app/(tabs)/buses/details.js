@@ -1,26 +1,59 @@
 import React from "react";
-import { View, Text, ScrollView, StyleSheet } from "react-native";
+import { View, Text, ScrollView, StyleSheet, Image } from "react-native";
 import { useLocalSearchParams } from "expo-router";
-
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { LinearGradient } from 'expo-linear-gradient';
 
 const IntroductionScreen = () => {
-  const { BusNo } = useLocalSearchParams();
+  const { BusNo, BusTime } = useLocalSearchParams();
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.heading}>Bus Number {BusNo}</Text>
-      <Text style={styles.text}>
-        Hi, I’m Harjot Singh, a passionate web developer and 
-         interactive designer currently pursuing an 
-         Interactive Design and Technology diploma at SaskPolytech. 
-        I specialize in HTML, CSS, JavaScript, React.js, Tailwind CSS, WordPress, and Figma, 
-        bringing creative ideas to life through modern, user-friendly web experiences.
-      </Text>
-      <Text style={styles.text}>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+       <LinearGradient
+        // Background Linear Gradient
+        colors={['#0061FF', 'transparent']}
+        style={styles.background}
+      />
+      <View>
+        <Image
+          style={styles.tinyLogo}
+          source={require("../../../assets/images/saskatoon.jpg")}
+        />
+      </View>
+      <View style={styles.busNumber}>
+        <View style={styles.details}>
+          <View>
+            <Text>{BusNo}</Text>
+            <Text>in {BusTime} minutes</Text>
+          </View>
+          <View>
+            <Ionicons name={"folder-open"} color="#000" size={24} />
+          </View>
+        </View>
+        <View style={styles.details}>
+          <View>
+            <Text>Go</Text>
+            <Text>in 6 minutes</Text>
+          </View>
+          <View>
+            <Ionicons name={"folder-open"} color="#000" size={24} />
+          </View>
+        </View>
+      </View>
 
+      <View style={styles.busStops}>
+        <Text style={styles.heading}>Bus Stops</Text>
+        <View style={styles.stops}>
+        <Text style={styles.stoptext}>Stop 1</Text>
+        <Text  style={styles.stoptext}>Stop 1</Text>
+        <Text style={styles.stoptext}>Stop 1</Text>
+        <Text style={styles.stoptext}>Stop 1</Text>
+        <Text style={styles.stoptext}>Stop 1</Text>
+        </View>
+      </View>
+      <View style={styles.cta}>
 
-      </Text>
+      </View>
     </ScrollView>
   );
 };
@@ -28,8 +61,15 @@ const IntroductionScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    padding: 20,
-    backgroundColor: "#f8f9fa",
+    // padding: 20,
+    backgroundColor: "#60EFFF",
+  },
+  background: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    height: 700,
   },
   heading: {
     fontSize: 22,
@@ -54,6 +94,42 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#28a745",
     marginTop: 20,
+  },
+  tinyLogo: {
+    width: "100%",
+    height: 300,
+  },
+  busNumber: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginTop: 20,
+  },
+  details: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    backgroundColor: "#fff",
+    width: "40%",
+    height: 70,
+    padding: 12,
+  },
+  busStops:{
+    marginTop: 15,
+    marginLeft: 21,
+  },
+  heading:{
+    fontSize: 25,
+    fontWeight: 700,
+    color: '#fff'
+  },
+  stops:{
+    marginTop: 14,
+  },
+  stoptext:{
+    fontSize: 17,
+    lineHeight: 24,
+    color: "#fff",
+    marginBottom: 10,
+    textDecorationLine: 'underline',
   },
 });
 

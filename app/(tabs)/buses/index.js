@@ -1,12 +1,18 @@
 import { Text, View, StyleSheet, Pressable } from "react-native";
 import { Link } from "expo-router";
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default function Index() {
   return (
     <View style={styles.container}>
+       <LinearGradient
+              // Background Linear Gradient
+              colors={['#0061FF', 'transparent']}
+              style={styles.background}
+            />
       <Text style={styles.heading}>Buses Nearby</Text>
       <Link  
-      href={{pathname: "/buses/details", params: {BusNo: 61}}}
+      href={{pathname: "/buses/details", params: {BusNo: 61, BusTime: 5}}}
       asChild  
       >
       <Pressable style={styles.buses}>
@@ -41,7 +47,7 @@ export default function Index() {
           <Text style={styles.text}>63</Text> <Text style={styles.secondaryText}>Hampton Village</Text>
         </View>
         <View>
-          <Text style={styles.text}>9</Text>
+          <Text style={styles.text}>09</Text>
           <Text style={styles.secondaryText}>minutes</Text>{" "}
         </View>
       </Pressable>
@@ -68,8 +74,15 @@ const styles = StyleSheet.create({
   container: {
     // flex: 1,
     alignItems: "center",
-    backgroundColor: "black",
+    backgroundColor: "#60EFFF",
     height: "100%",
+  },
+  background: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    height: 700,
   },
   heading:{
     fontSize: 32,
