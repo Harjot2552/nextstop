@@ -17,7 +17,13 @@ export default function Edit() {
                   />
                   <Text style={[styles.heading, styles.space]}>Harjot Singh</Text>
         </View>
-
+        <View style={{marginTop: 40}}>
+          <View>
+          <Text style={[styles.SecondaryHeading, styles.space]}>Your Email Address</Text>
+          <Text style={[styles.secondaryText, styles.space]}>harjotsingh2552@gmail.com</Text>
+          <View style={[styles.hr, styles.space]}></View>
+          </View>
+          </View>
       </View>
     
     </ScrollView>
@@ -54,6 +60,12 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 700,
     color: "#000",
+  },
+  SecondaryHeading:{
+    fontSize: 19,
+    fontWeight: 500,
+    color: "#000",
+
   },
   space: {
     marginTop: 6,
