@@ -2,7 +2,6 @@ import { Text, View, StyleSheet, ScrollView, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function Edit() {
-
   return (
     <ScrollView style={styles.container}>
       <LinearGradient
@@ -11,21 +10,56 @@ export default function Edit() {
       />
       <View style={styles.box}>
         <View style={styles.flex}>
-            <Image
-                    style={styles.image}
-                    source={require("../../../assets/images/harjot.jpg")}
-                  />
-                  <Text style={[styles.heading, styles.space]}>Harjot Singh</Text>
+          <Image
+            style={styles.image}
+            source={require("../../../assets/images/harjot.jpg")}
+          />
+          <Text style={[styles.heading, styles.space]}>Harjot Singh</Text>
         </View>
-        <View style={{marginTop: 40}}>
-          <View>
-          <Text style={[styles.SecondaryHeading, styles.space]}>Your Email Address</Text>
-          <Text style={[styles.secondaryText, styles.space]}>harjotsingh2552@gmail.com</Text>
-          <View style={[styles.hr, styles.space]}></View>
+        <View style={{ marginTop: 40 }}>
+          <View style={styles.space}>
+            <Text style={[styles.SecondaryHeading, styles.space]}>
+              Your Email Address
+            </Text>
+            <Text style={[styles.secondaryText, styles.space]}>
+              harjotsingh2552@gmail.com
+            </Text>
+            <View style={[styles.hr, styles.space]}></View>
           </View>
+
+          {/* ============================================= */}
+          <View style={styles.space}>
+            <Text style={[styles.SecondaryHeading, styles.space]}>
+              Your Password
+            </Text>
+            <Text style={[styles.secondaryText, styles.space]}>
+              ******************
+            </Text>
+            <View style={[styles.hr, styles.space]}></View>
           </View>
+          {/* ============================================= */}
+          <View style={styles.space}>
+            <Text style={[styles.SecondaryHeading, styles.space]}>
+              Your Phone Number
+            </Text>
+            <Text style={[styles.secondaryText, styles.space]}>
+              +1 (639) 567 9078
+            </Text>
+            <View style={[styles.hr, styles.space]}></View>
+          </View>
+
+          {/* ============================================= */}
+          <View style={styles.space}>
+            <Text style={[styles.SecondaryHeading, styles.space]}>
+              Address
+            </Text>
+            <Text style={[styles.secondaryText, styles.space]}>
+              Saskatoon, SK
+            </Text>
+            <View style={[styles.hr, styles.space]}></View>
+          </View>
+        </View>
       </View>
-    
     </ScrollView>
   );
 }
@@ -61,11 +95,10 @@ const styles = StyleSheet.create({
     fontWeight: 700,
     color: "#000",
   },
-  SecondaryHeading:{
+  SecondaryHeading: {
     fontSize: 19,
     fontWeight: 500,
     color: "#000",
-
   },
   space: {
     marginTop: 6,
@@ -80,7 +113,7 @@ const styles = StyleSheet.create({
   flex: {
     flexDirection: "row",
     // justifyContent: "space-between",
-    alignItems: 'center',
+    alignItems: "center",
   },
   image: {
     width: 75,
