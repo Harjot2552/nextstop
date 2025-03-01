@@ -60,8 +60,9 @@ export default function Index() {
             <Ionicons name={"information-sharp"} color="#fff" size={24} />
           </TouchableOpacity>
         </View>
+        <Text style={styles.logo}>NextStop</Text>
       </View>
-      <Text style={styles.logo}>NextStop</Text>
+
     </View>
   );
 }
