@@ -27,6 +27,9 @@ export default function AboutScreen() {
       />
       <View style={styles.box}>
         <Text style={styles.heading}>Your Passes</Text>
+        <Link asChild href={{
+          pathname: "/tickets/settings"
+        }}>
         <Pressable style={styles.yourPass}>
           <View style={styles.flex}>
             <Text
@@ -47,6 +50,7 @@ export default function AboutScreen() {
             <Text style={styles.warning}>15 hours in 40 minutes</Text>{" "}
           </Text>
         </Pressable>
+        </Link>
       </View>
 
       <View style={styles.box}>
