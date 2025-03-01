@@ -31,6 +31,11 @@ export default function SettingsScreen() {
         Dec 4, 2024 at 4:09 PM
         </Text>
         <View style={[styles.hr]}></View>
+        <Text style={[styles.heading, styles.space]}>Ticket ID</Text>
+        <Text style={[styles.secondaryText, styles.space]}>
+        HUFUFIGUJGUFYDF675
+        </Text>
+        <View style={[styles.hr]}></View>
       </View>
     
     </ScrollView>
