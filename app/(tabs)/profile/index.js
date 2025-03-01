@@ -16,8 +16,11 @@ export default function Index() {
         />
       <Text style={[styles.heading, styles.space, {textAlign: 'center'}]}>Harjot Singh</Text>
       <Text style={[styles.secondaryText, styles.space, {textAlign: 'center'}]}>@Harjot2552</Text>
-      <View style={styles.btnGroup}>
-        <View style={styles.button}><Text>Edit Profile</Text></View>
+      <View style={[styles.btnGroup, styles.space]}>
+        <View style={[styles.button, styles.space, styles.flex]}>
+          <Text style={styles.text}>Edit Profile</Text>
+          
+          </View>
 
       </View>
       </View>
@@ -38,8 +41,8 @@ const styles = StyleSheet.create({
     height: 700,
   }, 
   text: {
-    color: "#000",
-    fontSize: 22,
+    color: "#fff",
+    fontSize: 16,
   },
   secondaryText: {
     color: "#B7B7B7",
@@ -81,6 +84,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   button:{
-    backgroundColors
+    backgroundColor: '#0061FF',
+    padding: 12,
   }
 });
