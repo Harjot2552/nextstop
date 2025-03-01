@@ -1,18 +1,25 @@
-import { Text, View, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
+import React from 'react';
+import { Text, View, StyleSheet, TouchableOpacity, ScrollView, TextInput } from "react-native";
 import { Link } from "expo-router";
 import { LinearGradient } from 'expo-linear-gradient';
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function Index() {
+  const [text, onChangeText] = React.useState('Seach Route');
   return (
     <ScrollView style={styles.container}>
       <View style={styles.box}>
+     
        <LinearGradient
-              // Background Linear Gradient
               colors={['#0061FF', 'transparent']}
               style={styles.background}
             />
-      <Text style={styles.heading}>Buses Nearby</Text>
+             <TextInput
+          style={styles.input}
+          onChangeText={onChangeText}
+          value={text}
+        />
+      {/* <Text style={styles.heading}>Buses Nearby</Text> */}
       <Link  
       href={{pathname: "/buses/details", params: {BusNo: 61, BusTime: 5}}}
       asChild  
@@ -140,6 +147,16 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
     height: 700,
+  },
+  input: {
+    height: 60,
+    margin: 12,
+    borderWidth: 1,
+    padding: 20,
+    width: '95%',
+  color:'white',
+  borderColor: 'white',
+  fontSize: 18,
   },
   heading:{
     fontSize: 32,
