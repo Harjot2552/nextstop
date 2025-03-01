@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, ScrollView, TextInput } from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity, ScrollView, TextInput, Button } from "react-native";
 import { Link } from "expo-router";
 import { LinearGradient } from 'expo-linear-gradient';
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -81,7 +81,7 @@ export default function Index() {
       <TouchableOpacity >
         <View style={[styles.flex, styles.cta]}>
         <Text style={[ {margin: 0, fontSize: 23, color: '#fff', fontWeight: 600}]}>Buy Tickets</Text>
-        <Ionicons name={"folder-open"} color="#fff" size={24} />
+        <Ionicons name={"ticket"} color="#fff" size={24} />
         </View>
       </TouchableOpacity>
       </Link>
