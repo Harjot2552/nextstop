@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet,TouchableOpacity, Alert  } from 'react-native';
+import { Text, View, StyleSheet,TouchableOpacity, Alert, Image, Button  } from 'react-native';
  import { Link } from 'expo-router'; 
  import { LinearGradient } from 'expo-linear-gradient';
 
@@ -10,8 +10,16 @@ export default function Index() {
               style={styles.background}
             />
       <View style={styles.box}>
+      <Image
+          style={styles.image}
+          source={require("../../../assets/images/harjot.jpg")}
+        />
+      <Text style={[styles.heading, styles.space, {textAlign: 'center'}]}>Harjot Singh</Text>
+      <Text style={[styles.secondaryText, styles.space, {textAlign: 'center'}]}>@Harjot2552</Text>
+      <View style={styles.btnGroup}>
+        <View style={styles.button}><Text>Edit Profile</Text></View>
 
-
+      </View>
       </View>
     </View>
   );
@@ -38,10 +46,20 @@ const styles = StyleSheet.create({
   },
   box: {
     width: "auto",
-    margin: 20,
-    padding: 20,
+    margin: 10,
+    padding: 15,
+    paddingTop: 35,
     backgroundColor: "white",
     borderRadius: 5,
+  },
+  image:{
+    width: 150,
+    height: 150,
+    marginTop: 0,
+    borderRadius: 100,
+    marginBottom: 0,
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
   heading: {
     fontSize: 22,
@@ -62,4 +80,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
+  button:{
+    backgroundColors
+  }
 });
