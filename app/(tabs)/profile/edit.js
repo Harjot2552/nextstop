@@ -59,6 +59,7 @@ export default function Edit() {
             <View style={[styles.hr, styles.space]}></View>
           </View>
         </View>
+        <Text style={styles.logo}>NextStop</Text>
       </View>
     </ScrollView>
   );
@@ -121,4 +122,14 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     marginRight: 12,
   },
+  logo:{
+    fontSize: 35,
+    color: '#B7B7B7',
+    fontWeight: 700,
+    textAlign: 'center',
+    margin: 20,
+    letterSpacing: 3,
+    opacity: 0.6,
+
+  }
 });
