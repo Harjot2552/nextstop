@@ -26,6 +26,11 @@ export default function SettingsScreen() {
       Day Pass
         </Text>
         <View style={[styles.hr]}></View>
+        <Text style={[styles.heading, styles.space]}>Purchase</Text>
+        <Text style={[styles.secondaryText, styles.space]}>
+        Dec 4, 2024 at 4:09 PM
+        </Text>
+        <View style={[styles.hr]}></View>
       </View>
     
     </ScrollView>
