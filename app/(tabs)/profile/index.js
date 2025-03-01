@@ -6,11 +6,13 @@ export default function Index() {
   return (
     <View style={styles.container}>
           <LinearGradient
-              // Background Linear Gradient
               colors={['#0061FF', 'transparent']}
               style={styles.background}
             />
-      
+      <View style={styles.box}>
+
+
+      </View>
     </View>
   );
 }
@@ -26,27 +28,38 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
     height: 700,
-  },
+  }, 
   text: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 20,
+    color: "#000",
+    fontSize: 22,
   },
-  button: {
-    backgroundColor: "#007bff",
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    borderRadius: 8,
+  secondaryText: {
+    color: "#B7B7B7",
   },
-  button1:{
-    marginTop: 30,
-    fontSize: 20,
-    textDecorationLine: 'underline',
-    color: '#000',
+  box: {
+    width: "auto",
+    margin: 20,
+    padding: 20,
+    backgroundColor: "white",
+    borderRadius: 5,
   },
-  buttonText: {
-    color: "#fff",
-    fontSize: 18,
-    fontWeight: "bold",
+  heading: {
+    fontSize: 22,
+    fontWeight: 700,
+    color: "#000",
+  },
+  space: {
+    marginTop: 6,
+    marginBottom: 6,
+  },
+  hr: {
+    width: "90%",
+    height: 1,
+    backgroundColor: "gray",
+    marginVertical: 10,
+  },
+  flex: {
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
 });
