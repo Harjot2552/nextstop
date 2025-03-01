@@ -5,7 +5,7 @@ import {
   ScrollView,
   Button,
   ToastAndroid,
-  Pressable,
+  TouchableOpacity,
 } from "react-native";
 import { Link } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
@@ -31,7 +31,7 @@ export default function AboutScreen() {
           pathname: "/tickets/settings",
           params: {price: 4.99, pass: 'Adult Daily Pass', expire: '15 hours 40 minutes'},
         }}>
-        <Pressable style={styles.yourPass}>
+        <TouchableOpacity style={styles.yourPass}>
           <View style={styles.flex}>
             <Text
               style={[
@@ -50,7 +50,7 @@ export default function AboutScreen() {
             Expires in{" "}
             <Text style={styles.warning}>15 hours in 40 minutes</Text>{" "}
           </Text>
-        </Pressable>
+        </TouchableOpacity>
         </Link>
       </View>
 
