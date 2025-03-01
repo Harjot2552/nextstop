@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Pressable } from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import { Link } from "expo-router";
 import { LinearGradient } from 'expo-linear-gradient';
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -16,7 +16,7 @@ export default function Index() {
       href={{pathname: "/buses/details", params: {BusNo: 61, BusTime: 5}}}
       asChild  
       >
-      <Pressable style={styles.buses}>
+      <TouchableOpacity style={styles.buses}>
         <View>
           <Text style={styles.text}>61</Text> <Text style={styles.secondaryText}>Confedration Terminal</Text>
         </View>
@@ -24,12 +24,12 @@ export default function Index() {
           <Text style={styles.text}>05</Text>
           <Text style={styles.secondaryText}>minutes</Text>{" "}
         </View>
-      </Pressable></Link>
+      </TouchableOpacity></Link>
 
       <Link asChild
       href={{pathname: "/buses/details", params: {BusNo: 65, BusTime: 0}}}
       >
-      <Pressable style={styles.buses}>
+      <TouchableOpacity style={styles.buses}>
         <View>
           <Text style={styles.text}>65</Text> <Text style={styles.secondaryText}>City Center</Text>
         </View>
@@ -37,13 +37,13 @@ export default function Index() {
           <Text style={styles.text}>00</Text>
           <Text style={styles.secondaryText}>minutes</Text>{" "}
         </View>
-      </Pressable>
+      </TouchableOpacity>
       </Link>
 
       <Link asChild 
       href={{pathname: "/buses/details", params: {BusNo: 63, BusTime: 9}}}
       >
-      <Pressable style={styles.buses}>
+      <TouchableOpacity style={styles.buses}>
         <View>
           <Text style={styles.text}>63</Text> <Text style={styles.secondaryText}>Hampton Village</Text>
         </View>
@@ -51,13 +51,13 @@ export default function Index() {
           <Text style={styles.text}>09</Text>
           <Text style={styles.secondaryText}>minutes</Text>{" "}
         </View>
-      </Pressable>
+      </TouchableOpacity>
       </Link>
 
       <Link asChild
       href={{pathname: "/buses/details", params: {BusNo: 82, BusTime: 3}}}
       >
-      <Pressable style={styles.buses}>
+      <TouchableOpacity style={styles.buses}>
         <View>
           <Text style={styles.text}>82</Text> <Text style={styles.secondaryText}>Center mall</Text>
         </View>
@@ -65,15 +65,17 @@ export default function Index() {
           <Text style={styles.text}>03</Text>
           <Text style={styles.secondaryText}>minutes</Text>{" "}
         </View>
-      </Pressable>
+      </TouchableOpacity>
       </Link>
       <Link asChild href={{
-        pathname: 'tickets/index'
+        pathname: '/tickets'
       }}> 
-      <View style={[styles.flex, styles.cta]}>
-        <Text style={[ {margin: 0, fontSize: 23, color: '#fff', fontWeight: 600}]}>NextStop</Text>
+      <TouchableOpacity >
+        <View style={[styles.flex, styles.cta]}>
+        <Text style={[ {margin: 0, fontSize: 23, color: '#fff', fontWeight: 600}]}>Buy Tickets</Text>
         <Ionicons name={"folder-open"} color="#fff" size={24} />
-      </View>
+        </View>
+      </TouchableOpacity>
       </Link>
     </View>
   );
