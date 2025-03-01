@@ -10,7 +10,6 @@ const IntroductionScreen = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
        <LinearGradient
-        // Background Linear Gradient
         colors={['#0061FF', 'transparent']}
         style={styles.background}
       />
@@ -27,7 +26,7 @@ const IntroductionScreen = () => {
             <Text style={styles.textSecondary}>in {BusTime} minutes</Text>
           </View>
           <View>
-            <Ionicons name={"folder-open"} color="#000" size={24} />
+            <Ionicons name={"bus"} color="#000" size={24} />
           </View>
         </View>
         <View style={styles.details}>
@@ -36,7 +35,7 @@ const IntroductionScreen = () => {
             <Text style={styles.textSecondary}>in 6 minutes</Text>
           </View>
           <View>
-            <Ionicons name={"folder-open"} color="#000" size={24} />
+            <Ionicons name={"walk"} color="#000" size={24} />
           </View>
         </View>
       </View>
@@ -45,21 +44,21 @@ const IntroductionScreen = () => {
         <Text style={styles.heading}>Bus Stops</Text>
         <View style={styles.stops}>
         <Text style={styles.stoptext}>&#9758; Stop 1</Text>
-        <Text  style={styles.stoptext}>&#9758; Stop 1</Text>
-        <Text style={styles.stoptext}>&#9758; Stop 1</Text>
-        <Text style={styles.stoptext}>&#9758; Stop 1</Text>
-        <Text style={styles.stoptext}>&#9758; Stop 1</Text>
+        <Text  style={styles.stoptext}>&#9758; Stop 2</Text>
+        <Text style={styles.stoptext}>&#9758; Stop 3</Text>
+        <Text style={styles.stoptext}>&#9758; Stop 4</Text>
+        <Text style={styles.stoptext}>&#9758; Stop 5</Text>
         </View>
       </View>
       <View style={styles.cta}>
         <Text style={styles.ctaHeading}>Contact NextStop</Text>
         <View style={styles.contact}>
           <Text style={styles.headingCta}>Help</Text>
-          <Ionicons name={"folder-open"} color="#fff" size={24} />
+          <Ionicons name={"help-circle"} color="#fff" size={29} />
         </View>
         <View style={styles.help}>
         <Text style={styles.headingCta}>Email Us</Text>
-        <Ionicons name={"folder-open"} color="#fff" size={24} />
+        <Ionicons name={"mail"} color="#fff" size={24} />
         </View>
       </View>
     </ScrollView>

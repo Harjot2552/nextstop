@@ -38,26 +38,26 @@ export default function Index() {
             <TouchableOpacity >
               <View style={[styles.button, styles.space, styles.flex]}>
               <Text style={styles.text}>Edit Profile</Text>
-              <Ionicons name={"folder-open"} color="#fff" size={24} />
+              <Ionicons name={"pencil"} color="#fff" size={24} />
               </View>
             </TouchableOpacity>
           </Link>
 
-          <TouchableOpacity onPress={() => Alert.alert("Under construction!")}  style={[styles.button, styles.space, styles.flex]}>
+          <TouchableOpacity onPress={() => Alert.alert("Under development!")}  style={[styles.button, styles.space, styles.flex]}>
             <Text style={styles.text}>Payment Settings</Text>
-            <Ionicons name={"folder-open"} color="#fff" size={24} />
+            <Ionicons name={"card"} color="#fff" size={24} />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => Alert.alert("Under construction!")} style={[styles.button, styles.space, styles.flex]}>
+          <TouchableOpacity onPress={() => Alert.alert("Under development!")} style={[styles.button, styles.space, styles.flex]}>
             <Text style={styles.text}>App Settings</Text>
-            <Ionicons name={"folder-open"} color="#fff" size={24} />
+            <Ionicons name={"settings"} color="#fff" size={24} />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => Alert.alert("Under construction!")} style={[styles.button, styles.space, styles.flex]}>
+          <TouchableOpacity onPress={() => Alert.alert("Under development!")} style={[styles.button, styles.space, styles.flex]}>
             <Text style={styles.text}>Customer Support</Text>
-            <Ionicons name={"folder-open"} color="#fff" size={24} />
+            <Ionicons name={"call"} color="#fff" size={24} />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => Alert.alert("Under construction!")} style={[styles.button, styles.space, styles.flex]}>
+          <TouchableOpacity onPress={() => Alert.alert("Under development!")} style={[styles.button, styles.space, styles.flex]}>
             <Text style={styles.text}>Insights</Text>
-            <Ionicons name={"folder-open"} color="#fff" size={24} />
+            <Ionicons name={"information-sharp"} color="#fff" size={24} />
           </TouchableOpacity>
         </View>
       </View>

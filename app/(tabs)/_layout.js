@@ -22,7 +22,7 @@ export default function TabLayout() {
                     title: 'Buses',
                     headerShown: false,
                     tabBarIcon: ({ color, focused }) => (
-                        <Ionicons name={focused ? 'folder-open' : 'folder-open'} color={color} size={24} />
+                        <Ionicons name={focused ? 'bus' : 'bus'} color={color} size={24} />
                     ),
                 }}
             />
@@ -32,7 +32,7 @@ export default function TabLayout() {
                     title: 'Tickets',
                     headerShown: false,
                     tabBarIcon: ({ color, focused }) => (
-                        <Ionicons name={focused ? 'man' : 'man'} color={color} size={24} />
+                        <Ionicons name={focused ? 'ticket' : 'ticket'} color={color} size={24} />
                     ),
                 }}
             />

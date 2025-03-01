@@ -42,7 +42,7 @@ export default function AboutScreen() {
             >
               Daily Pass
             </Text>
-            <Ionicons name={"folder-open"} color="#000" size={24} />
+            <Ionicons name={"arrow-forward-circle"} color="#000" size={30} />
           </View>
           <Text style={[styles.text, styles.space]}>Adult Day Pass</Text>
           <Text style={styles.hr}></Text>
@@ -88,7 +88,9 @@ export default function AboutScreen() {
           </Text>
 
           <Text style={styles.hr}></Text>
+          <TouchableOpacity>
           <Button color="#000" onPress={() => purchase()} title="Purchase" />
+          </TouchableOpacity>
         </View>
 
         {/* ======================================================== */}
@@ -124,7 +126,9 @@ export default function AboutScreen() {
           </Text>
 
           <Text style={styles.hr}></Text>
+          <TouchableOpacity>
           <Button color="#000" onPress={() => purchase()} title="Purchase" />
+          </TouchableOpacity>
         </View>
 
         {/* ============================================================ */}
@@ -160,7 +164,9 @@ export default function AboutScreen() {
           </Text>
 
           <Text style={styles.hr}></Text>
+          <TouchableOpacity>
           <Button color="#000" onPress={() => purchase()} title="Purchase" />
+          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>
