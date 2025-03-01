@@ -1,11 +1,12 @@
-import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 import { Link } from "expo-router";
 import { LinearGradient } from 'expo-linear-gradient';
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function Index() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
+      <View style={styles.box}>
        <LinearGradient
               // Background Linear Gradient
               colors={['#0061FF', 'transparent']}
@@ -77,16 +78,61 @@ export default function Index() {
         </View>
       </TouchableOpacity>
       </Link>
-    </View>
+
+      <Link asChild
+      href={{pathname: "/buses/details", params: {BusNo: 7, BusTime: 6}}}
+      >
+      <TouchableOpacity style={styles.buses}>
+        <View>
+          <Text style={styles.text}>07</Text> <Text style={styles.secondaryText}>Dundonald</Text>
+        </View>
+        <View>
+          <Text style={styles.text}>06</Text>
+          <Text style={styles.secondaryText}>minutes</Text>{" "}
+        </View>
+      </TouchableOpacity>
+      </Link>
+
+      <Link asChild
+      href={{pathname: "/buses/details", params: {BusNo: 7, BusTime: 0}}}
+      >
+      <TouchableOpacity style={styles.buses}>
+        <View>
+          <Text style={styles.text}>11</Text> <Text style={styles.secondaryText}>Airport</Text>
+        </View>
+        <View>
+          <Text style={styles.text}>00</Text>
+          <Text style={styles.secondaryText}>minutes</Text>{" "}
+        </View>
+      </TouchableOpacity>
+      </Link>
+
+      <Link asChild
+      href={{pathname: "/buses/details", params: {BusNo: 11, BusTime: 23}}}
+      >
+      <TouchableOpacity style={styles.buses}>
+        <View>
+          <Text style={styles.text}>14</Text> <Text style={styles.secondaryText}>Industrial Area</Text>
+        </View>
+        <View>
+          <Text style={styles.text}>23</Text>
+          <Text style={styles.secondaryText}>minutes</Text>{" "}
+        </View>
+      </TouchableOpacity>
+      </Link>
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
-    alignItems: "center",
     backgroundColor: "#60EFFF",
     height: "100%",
+  },
+  box:{
+    alignItems: 'center',
+    marginBottom: 40,
   },
   background: {
     position: 'absolute',
