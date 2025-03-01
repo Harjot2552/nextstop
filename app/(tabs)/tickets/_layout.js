@@ -4,7 +4,7 @@ export default function AboutLayout() {
   return (
     <Stack>
       <Stack.Screen name="index" options={{ title: 'Tickets' }} />
-      <Stack.Screen name="settings" options={{ title: 'Settings' }} />
+      <Stack.Screen name="settings" options={{ title: 'Your Pass' }} />
     </Stack>
   );
 }

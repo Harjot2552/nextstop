@@ -1,5 +1,6 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import { useLocalSearchParams } from "expo-router";
+import { LinearGradient } from "expo-linear-gradient";
 
 
 export default function SettingsScreen() {
@@ -8,19 +9,26 @@ export default function SettingsScreen() {
 
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Settings screen</Text>
-      <Text style={styles.text}>Do you know how to pass parameter: { pass==true ? "Yes" : "No"}</Text>
-    </View>
+    <ScrollView style={styles.container}>
+         <LinearGradient
+              colors={["#0061FF", "transparent"]}
+              style={styles.background}
+            />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: '#60EFFF',
+  },
+  background: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    height: 800,
   },
   text: {
     color: '#000',
