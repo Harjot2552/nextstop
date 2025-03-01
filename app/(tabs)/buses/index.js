@@ -67,10 +67,14 @@ export default function Index() {
         </View>
       </Pressable>
       </Link>
-      <View>
-        <Text>NextStop</Text>
-        <Ionicons name={"folder-open"} color="#000" size={24} />
+      <Link asChild href={{
+        pathname: 'tickets/index'
+      }}> 
+      <View style={[styles.flex, styles.cta]}>
+        <Text style={[ {margin: 0, fontSize: 23, color: '#fff', fontWeight: 600}]}>NextStop</Text>
+        <Ionicons name={"folder-open"} color="#fff" size={24} />
       </View>
+      </Link>
     </View>
   );
 }
@@ -116,5 +120,22 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     marginTop: 10,
+  },
+  flex:{
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  space:{
+    marginTop: 4,
+    marginBottom: 4,
+  },
+  cta:{
+    backgroundColor: '#0061FF',
+    padding: 15,
+    width: '95%',
+    borderRadius: 5,
+    marginTop: 10,
+
   },
 });
