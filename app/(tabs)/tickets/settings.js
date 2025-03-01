@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   box: {
     width: "auto",
     margin: 20,
-    padding: 10,
+    padding: 20,
     backgroundColor: "white",
     borderRadius: 5,
   },
