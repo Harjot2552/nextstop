@@ -1,6 +1,7 @@
 import { Text, View, StyleSheet,TouchableOpacity, Alert, Image, Button  } from 'react-native';
  import { Link } from 'expo-router'; 
  import { LinearGradient } from 'expo-linear-gradient';
+ import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function Index() {
   return (
@@ -19,6 +20,7 @@ export default function Index() {
       <View style={[styles.btnGroup, styles.space]}>
         <View style={[styles.button, styles.space, styles.flex]}>
           <Text style={styles.text}>Edit Profile</Text>
+        <Ionicons name={"folder-open"} color="#fff" size={24} />
           
           </View>
 
@@ -86,5 +88,6 @@ const styles = StyleSheet.create({
   button:{
     backgroundColor: '#0061FF',
     padding: 12,
+    borderRadius: 5,
   }
 });
