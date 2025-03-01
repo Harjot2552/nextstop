@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, ScrollView } from "react-native";
+import { Text, View, StyleSheet, ScrollView, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function Edit() {
@@ -9,7 +9,15 @@ export default function Edit() {
         colors={["#0061FF", "transparent"]}
         style={styles.background}
       />
-      
+      <View style={styles.box}>
+        <View style={styles.flex}>
+            <Image
+                    style={styles.image}
+                    source={require("../../../assets/images/harjot.jpg")}
+                  />
+        </View>
+
+      </View>
     
     </ScrollView>
   );
@@ -59,5 +67,14 @@ const styles = StyleSheet.create({
   flex: {
     flexDirection: "row",
     justifyContent: "space-between",
+  },
+  image: {
+    width: 150,
+    height: 150,
+    marginTop: 0,
+    borderRadius: 100,
+    marginBottom: 0,
+    marginLeft: "auto",
+    marginRight: "auto",
   },
 });
