@@ -6,7 +6,6 @@ import {
   Alert,
   Image,
   Button,
-  Pressable,
 } from "react-native";
 import { Link } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
@@ -36,30 +35,30 @@ export default function Index() {
           <Link href={{
             pathname: 'profile/edit',
           }} asChild>
-            <Pressable >
+            <TouchableOpacity >
               <View style={[styles.button, styles.space, styles.flex]}>
               <Text style={styles.text}>Edit Profile</Text>
               <Ionicons name={"folder-open"} color="#fff" size={24} />
               </View>
-            </Pressable>
+            </TouchableOpacity>
           </Link>
 
-          <Pressable onPress={() => Alert.alert("Under construction!")}  style={[styles.button, styles.space, styles.flex]}>
+          <TouchableOpacity onPress={() => Alert.alert("Under construction!")}  style={[styles.button, styles.space, styles.flex]}>
             <Text style={styles.text}>Payment Settings</Text>
             <Ionicons name={"folder-open"} color="#fff" size={24} />
-          </Pressable>
-          <Pressable onPress={() => Alert.alert("Under construction!")} style={[styles.button, styles.space, styles.flex]}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Alert.alert("Under construction!")} style={[styles.button, styles.space, styles.flex]}>
             <Text style={styles.text}>App Settings</Text>
             <Ionicons name={"folder-open"} color="#fff" size={24} />
-          </Pressable>
-          <Pressable onPress={() => Alert.alert("Under construction!")} style={[styles.button, styles.space, styles.flex]}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Alert.alert("Under construction!")} style={[styles.button, styles.space, styles.flex]}>
             <Text style={styles.text}>Customer Support</Text>
             <Ionicons name={"folder-open"} color="#fff" size={24} />
-          </Pressable>
-          <Pressable onPress={() => Alert.alert("Under construction!")} style={[styles.button, styles.space, styles.flex]}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Alert.alert("Under construction!")} style={[styles.button, styles.space, styles.flex]}>
             <Text style={styles.text}>Insights</Text>
             <Ionicons name={"folder-open"} color="#fff" size={24} />
-          </Pressable>
+          </TouchableOpacity>
         </View>
       </View>
       <Text style={styles.logo}>NextStop</Text>
