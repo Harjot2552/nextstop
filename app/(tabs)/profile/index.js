@@ -1,20 +1,31 @@
 import { Text, View, StyleSheet,TouchableOpacity, Alert  } from 'react-native';
  import { Link } from 'expo-router'; 
+ import { LinearGradient } from 'expo-linear-gradient';
 
 export default function Index() {
   return (
     <View style={styles.container}>
-       <Text style={styles.text}>Profile Index</Text>
+          <LinearGradient
+              // Background Linear Gradient
+              colors={['#0061FF', 'transparent']}
+              style={styles.background}
+            />
+      
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#f8f9fa",
+    flexGrow: 1,
+    backgroundColor: "#60EFFF",
+  },
+  background: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    height: 700,
   },
   text: {
     fontSize: 24,
