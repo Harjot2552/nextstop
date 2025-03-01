@@ -62,6 +62,7 @@ export default function Index() {
           </Pressable>
         </View>
       </View>
+      <Text style={styles.logo}>NextStop</Text>
     </View>
   );
 }
@@ -127,4 +128,14 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 5,
   },
+  logo:{
+    fontSize: 35,
+    color: '#B7B7B7',
+    fontWeight: 700,
+    textAlign: 'center',
+    margin: 20,
+    letterSpacing: 3,
+    opacity: 0.6,
+
+  }
 });
