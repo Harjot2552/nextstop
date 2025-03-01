@@ -33,30 +33,33 @@ export default function Index() {
           @Harjot2552
         </Text>
         <View style={[styles.btnGroup, styles.space]}>
-          <Link asChild href={{
-            pathname: '/profile/edit',
-          }}>
-          <Pressable style={[styles.button, styles.space, styles.flex]}>
-            <Text style={styles.text}>Edit Profile</Text>
-            <Ionicons name={"folder-open"} color="#fff" size={24} />
-          </Pressable>
+          <Link href={{
+            pathname: 'profile/edit',
+          }} asChild>
+            <Pressable >
+              <View style={[styles.button, styles.space, styles.flex]}>
+              <Text style={styles.text}>Edit Profile</Text>
+              <Ionicons name={"folder-open"} color="#fff" size={24} />
+              </View>
+            </Pressable>
           </Link>
-          <View  style={[styles.button, styles.space, styles.flex]}>
+
+          <Pressable onPress={() => Alert.alert("Under construction!")}  style={[styles.button, styles.space, styles.flex]}>
             <Text style={styles.text}>Payment Settings</Text>
             <Ionicons name={"folder-open"} color="#fff" size={24} />
-          </View>
-          <View style={[styles.button, styles.space, styles.flex]}>
+          </Pressable>
+          <Pressable onPress={() => Alert.alert("Under construction!")} style={[styles.button, styles.space, styles.flex]}>
             <Text style={styles.text}>App Settings</Text>
             <Ionicons name={"folder-open"} color="#fff" size={24} />
-          </View>
-          <View style={[styles.button, styles.space, styles.flex]}>
+          </Pressable>
+          <Pressable onPress={() => Alert.alert("Under construction!")} style={[styles.button, styles.space, styles.flex]}>
             <Text style={styles.text}>Customer Support</Text>
             <Ionicons name={"folder-open"} color="#fff" size={24} />
-          </View>
-          <View style={[styles.button, styles.space, styles.flex]}>
+          </Pressable>
+          <Pressable onPress={() => Alert.alert("Under construction!")} style={[styles.button, styles.space, styles.flex]}>
             <Text style={styles.text}>Insights</Text>
             <Ionicons name={"folder-open"} color="#fff" size={24} />
-          </View>
+          </Pressable>
         </View>
       </View>
     </View>
@@ -117,6 +120,7 @@ const styles = StyleSheet.create({
   flex: {
     flexDirection: "row",
     justifyContent: "space-between",
+    alignItems: "center",
   },
   button: {
     backgroundColor: "#0061FF",
