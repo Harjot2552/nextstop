@@ -1,6 +1,7 @@
 import { Text, View, StyleSheet, Pressable } from "react-native";
 import { Link } from "expo-router";
 import { LinearGradient } from 'expo-linear-gradient';
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function Index() {
   return (
@@ -66,6 +67,10 @@ export default function Index() {
         </View>
       </Pressable>
       </Link>
+      <View>
+        <Text>NextStop</Text>
+        <Ionicons name={"folder-open"} color="#000" size={24} />
+      </View>
     </View>
   );
 }
