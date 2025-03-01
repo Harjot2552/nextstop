@@ -15,6 +15,7 @@ export default function Edit() {
                     style={styles.image}
                     source={require("../../../assets/images/harjot.jpg")}
                   />
+                  <Text style={[styles.heading, styles.space]}>Harjot Singh</Text>
         </View>
 
       </View>
@@ -66,15 +67,13 @@ const styles = StyleSheet.create({
   },
   flex: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
+    alignItems: 'center',
   },
   image: {
-    width: 150,
-    height: 150,
-    marginTop: 0,
+    width: 75,
+    height: 75,
     borderRadius: 100,
-    marginBottom: 0,
-    marginLeft: "auto",
-    marginRight: "auto",
+    marginRight: 12,
   },
 });
