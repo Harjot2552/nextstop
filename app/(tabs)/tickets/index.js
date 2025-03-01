@@ -28,7 +28,8 @@ export default function AboutScreen() {
       <View style={styles.box}>
         <Text style={styles.heading}>Your Passes</Text>
         <Link asChild href={{
-          pathname: "/tickets/settings"
+          pathname: "/tickets/settings",
+          params: {price: 4.99, pass: 'Adult Daily Pass', expire: '15 hours 40 minutes'},
         }}>
         <Pressable style={styles.yourPass}>
           <View style={styles.flex}>

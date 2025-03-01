@@ -3,7 +3,7 @@ import { useLocalSearchParams } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function SettingsScreen() {
-  const { pass } = useLocalSearchParams();
+  const { pass, price, expire } = useLocalSearchParams();
 
   return (
     <ScrollView style={styles.container}>
@@ -16,14 +16,14 @@ export default function SettingsScreen() {
         <Text style={[styles.secondaryText, styles.space]}>
           Jan 2, 2025 at 11:59 PM
         </Text>
-        <Text style={[styles.timeLeft, styles.space]}>15 hours left</Text>
+        <Text style={[styles.timeLeft, styles.space]}>{expire}</Text>
         <View style={[styles.hr]}></View>
         <View style={[styles.flex, styles.space]}>
           <Text style={styles.heading}>Pass</Text>
-          <Text style={styles.heading}>$4.99</Text>
+          <Text style={styles.heading}>${price}</Text>
         </View>
         <Text style={[styles.secondaryText, styles.space]}>
-      Day Pass
+     {pass}
         </Text>
         <View style={[styles.hr]}></View>
         <Text style={[styles.heading, styles.space]}>Purchase</Text>
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   },
   timeLeft: {
     backgroundColor: "#0061FF",
-    width: "30%",
+    width: "45%",
     color: "white",
     padding: 5,
     borderRadius: 5,
