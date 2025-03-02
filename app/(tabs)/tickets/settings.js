@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet, ScrollView } from "react-native";
-import { useLocalSearchParams } from "expo-router";
+import { Link, useLocalSearchParams } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function SettingsScreen() {
@@ -22,22 +22,19 @@ export default function SettingsScreen() {
           <Text style={styles.heading}>Pass</Text>
           <Text style={styles.heading}>${price}</Text>
         </View>
-        <Text style={[styles.secondaryText, styles.space]}>
-     {pass}
-        </Text>
+        <Text style={[styles.secondaryText, styles.space]}>{pass}</Text>
         <View style={[styles.hr]}></View>
         <Text style={[styles.heading, styles.space]}>Purchase</Text>
         <Text style={[styles.secondaryText, styles.space]}>
-        Dec 4, 2024 at 4:09 PM
+          Dec 4, 2024 at 4:09 PM
         </Text>
         <View style={[styles.hr]}></View>
         <Text style={[styles.heading, styles.space]}>Ticket ID</Text>
         <Text style={[styles.secondaryText, styles.space]}>
-        HUFUFIGUJGUFYDF675
+          HUFUFIGUJGUFYDF675
         </Text>
         <View style={[styles.hr]}></View>
       </View>
-    
     </ScrollView>
   );
 }

@@ -10,8 +10,12 @@ import {
 import { Link } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import Policies from "../../policies";
+import { useState } from "react";
 
 export default function Index() {
+  const [modalVisible, setModalVisible] = useState(false);
+  
   return (
     <View style={styles.container}>
       <LinearGradient
@@ -59,6 +63,16 @@ export default function Index() {
             <Text style={styles.text}>Insights</Text>
             <Ionicons name={"information-sharp"} color="#fff" size={24} />
           </TouchableOpacity>
+          <TouchableOpacity onPress={() => setModalVisible(true)} >
+   
+            <View style={[styles.button, styles.space, styles.flex]}>
+            <Text style={styles.text}>Privacy & Policies</Text>
+            <Ionicons name={"information-sharp"} color="#fff" size={24} />
+            </View>
+         
+          </TouchableOpacity>
+          <Policies visible={modalVisible} onClose={() => setModalVisible(false)} />
+   
         </View>
         <Text style={styles.logo}>NextStop</Text>
       </View>

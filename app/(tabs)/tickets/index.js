@@ -6,12 +6,15 @@ import {
   Button,
   ToastAndroid,
   TouchableOpacity,
+  
 } from "react-native";
 import { Link } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function AboutScreen() {
+  
+
   const purchase = () => {
     ToastAndroid.showWithGravity(
       "Not Available",
@@ -19,6 +22,10 @@ export default function AboutScreen() {
       ToastAndroid.CENTER
     );
   };
+
+
+
+
   return (
     <ScrollView style={styles.container}>
       <LinearGradient
