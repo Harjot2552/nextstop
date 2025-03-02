@@ -12,9 +12,11 @@ import { LinearGradient } from "expo-linear-gradient";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Policies from "../../policies";
 import { useState } from "react";
+import { useLocalSearchParams } from "expo-router";
 
 export default function Index() {
   const [modalVisible, setModalVisible] = useState(false);
+
   
   return (
     <View style={styles.container}>
@@ -38,6 +40,7 @@ export default function Index() {
         <View style={[styles.btnGroup, styles.space]}>
           <Link href={{
             pathname: 'profile/edit',
+            params: {name: 'Harjot Singh'}
           }} asChild>
             <TouchableOpacity >
               <View style={[styles.button, styles.space, styles.flex]}>

@@ -1,7 +1,9 @@
 import { Text, View, StyleSheet, ScrollView, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { useLocalSearchParams } from "expo-router";
 
 export default function Edit() {
+      const { name } = useLocalSearchParams();
   return (
     <ScrollView style={styles.container}>
       <LinearGradient
@@ -14,7 +16,7 @@ export default function Edit() {
             style={styles.image}
             source={require("../../../assets/images/harjot.jpg")}
           />
-          <Text style={[styles.heading, styles.space]}>Harjot Singh</Text>
+          <Text style={[styles.heading, styles.space]}>{name}</Text>
         </View>
         <View style={{ marginTop: 40 }}>
           <View style={styles.space}>
