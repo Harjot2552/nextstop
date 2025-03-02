@@ -67,7 +67,7 @@ export default function Index() {
    
             <View style={[styles.button, styles.space, styles.flex]}>
             <Text style={styles.text}>Privacy & Policies</Text>
-            <Ionicons name={"information-sharp"} color="#fff" size={24} />
+            <Ionicons name={"book"} color="#fff" size={24} />
             </View>
          
           </TouchableOpacity>
