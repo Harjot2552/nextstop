@@ -15,39 +15,37 @@ export default function PrivacyPolicyModal({ visible, onClose }) {
     <Modal visible={visible} animationType="slide" transparent={true}>
       <View style={styles.modalContainer}>
         <View style={styles.modalContent}>
-          {/* Header with Gradient */}
-          <LinearGradient colors={["#60EFFF", "#1E90FF"]} style={styles.header}>
+          <View style={styles.header}>
             <Text style={styles.heading}>Privacy & Policies</Text>
-          </LinearGradient>
+            </View> 
 
-          {/* Scrollable Content */}
           <ScrollView contentContainerStyle={styles.scrollView}>
             <Text style={styles.text}>
               Welcome to our Privacy Policy section. Here you will find all the
               details regarding how we collect, use, and protect your
               information. 
               
-              {"\n\n"}1. **Data Collection** {"\n"}
+              {"\n\n"}1. Data Collection {"\n"}
               We collect information to provide better services to all our
               users. This includes details such as name, email, and usage data.
 
-              {"\n\n"}2. **Use of Data** {"\n"}
+              {"\n\n"}2. Use of Data {"\n"}
               The data collected is used to improve our services and enhance
               user experience.
 
-              {"\n\n"}3. **Data Protection** {"\n"}
+              {"\n\n"}3. Data Protection{"\n"}
               We prioritize the security of your data and implement necessary
               measures to protect it.
 
-              {"\n\n"}4. **Cookies & Tracking** {"\n"}
+              {"\n\n"}4. Cookies & Tracking{"\n"}
               Our app uses cookies and tracking technologies to personalize your
               experience.
 
               {"\n\n"}For more information, feel free to contact us!
             </Text>
+                <Text style={styles.logo}>NextStop</Text>
           </ScrollView>
 
-          {/* Close Button */}
           <TouchableOpacity style={styles.button} onPress={onClose}>
             <Text style={styles.buttonText}>Close</Text>
           </TouchableOpacity>
@@ -62,18 +60,19 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.5)", // Transparent background
+    backgroundColor: "rgba(0, 0, 0, 0.5)", 
   },
   modalContent: {
     width: "90%",
     height: "80%",
     backgroundColor: "white",
-    borderRadius: 15,
+    borderRadius: 5,
     overflow: "hidden",
   },
   header: {
     padding: 20,
     alignItems: "center",
+    backgroundColor: '#0061FF'
   },
   heading: {
     fontSize: 22,
@@ -89,7 +88,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
   },
   button: {
-    backgroundColor: "#1E90FF",
+    backgroundColor: "#0061FF",
     paddingVertical: 15,
     alignItems: "center",
   },
@@ -98,4 +97,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
   },
+  logo:{
+    fontSize: 35,
+    color: '#B7B7B7',
+    fontWeight: 700,
+    textAlign: 'center',
+    margin: 20,
+    letterSpacing: 3,
+    opacity: 0.6,
+
+  }
 });
