@@ -7,8 +7,6 @@ import {
   Modal,
   TouchableOpacity,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
-import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function PrivacyPolicyModal({ visible, onClose }) {
   return (

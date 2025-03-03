@@ -33,7 +33,11 @@ export default function AboutScreen() {
         style={styles.background}
       />
       <View style={styles.box}>
+        <View style={[styles.flex, {justifyContent: 'flex-start'}]}>
+
+        <Ionicons style={[{marginRight: 14}]} name={"ticket-outline"} color="#fff" size={30} />
         <Text style={styles.heading}>Your Passes</Text>
+        </View>
         <Link asChild href={{
           pathname: "/tickets/settings",
           params: {price: 4.99, pass: 'Adult Daily Pass', expire: '15 hours 40 minutes'},
