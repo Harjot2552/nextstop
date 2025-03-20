@@ -93,7 +93,7 @@ Follow these steps to set up the project locally:
 
 1️⃣ **Clone the repository:**
 ```sh
-git clone https://github.com/yourusername/NextStop.git
+git clone https://github.com/Harjot2552/NextStop.git
 ```
 
 2️⃣ **Navigate to the project directory:**
@@ -122,6 +122,3 @@ expo start
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License**. Feel free to use and modify it as needed! 🎉
